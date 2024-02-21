@@ -1,44 +1,73 @@
-// prompt("Сиздин атыныз?");
-// prompt("Сиз жактыран адамдын аты?");
+// function checkloveper() {
+//   var name = document.getElementById("name").value;
+//   var lname = document.getElementById("lname").value;
 
-// let loveScore = Math.random();
-// loveScore = loveScore * 100;
-// loveScore = Math.floor(loveScore) + 1;
-
-// if (loveScore > 70) {
-//   alert(`Той качан? сиздин шайкештигиңиз ${loveScore}% барабар♥`);
-// } else if (loveScore < 70 && loveScore > 50) {
-//   alert(`Жакшы жанылык! Cиздин шайкештигиңиз ${loveScore}% барабар♥`);
-// } else {
-//   alert(`Cиздин шайкештигиңиз ${loveScore}% барабар♥`);
+//   if (name == "") {
+//     alert("Атыңызды жазыңыз");
+//   } else if (name.length <= 2) {
+//     alert("жок дегенде 3 тамга жазуу керек");
+//   } else if (!isNaN(name)) {
+//     alert("сандар ат болуп эсептелбейт");
+//   } else if (lname == "") {
+//     alert("Сүйгөнүңүздүн атын жазыңыз");
+//   } else if (lname.length <= 2) {
+//     alert("жок дегенде 3 тамга жазуу керек");
+//   } else if (!isNaN(lname)) {
+//     alert("сандар ат болуп эсептелбейт");
+//   } else {
+//     var lovdata = Math.random() * 100;
+//     lovdata = Math.floor(lovdata);
+//     document.getElementById("lovevalue").value = lovdata + "%";
+//   }
+//   if (lovdata > 70) {
+//     alert(`Той качан? сиздин шайкештигиңиз ${lovdata}% барабар♥`);
+//   } else if (lovdata > 50 && lovdata < 70) {
+//     alert(`Жакшы жанылык! Cиздин шайкештигиңиз ${lovdata}% барабар♥`);
+//   } else {
+//     alert(`Cиздин шайкештигиңиз ${lovdata}% барабар♥`);
+//   }
 // }
-
 function checkloveper() {
   var name = document.getElementById("name").value;
   var lname = document.getElementById("lname").value;
 
+  // Проверка наличия имени
   if (name == "") {
     alert("Атыңызды жазыңыз");
-  } else if (name.length <= 2) {
+  }
+  // Проверка длины имени
+  else if (name.length <= 2) {
     alert("жок дегенде 3 тамга жазуу керек");
-  } else if (!isNaN(name)) {
+  }
+  // Проверка наличия цифр в имени
+  else if (!isNaN(name)) {
     alert("сандар ат болуп эсептелбейт");
-  } else if (lname == "") {
+  }
+  // Проверка наличия фамилии
+  else if (lname == "") {
     alert("Сүйгөнүңүздүн атын жазыңыз");
-  } else if (lname.length <= 2) {
+  }
+  // Проверка длины фамилии
+  else if (lname.length <= 2) {
     alert("жок дегенде 3 тамга жазуу керек");
-  } else if (!isNaN(lname)) {
+  }
+  // Проверка наличия цифр в фамилии
+  else if (!isNaN(lname)) {
     alert("сандар ат болуп эсептелбейт");
-  } else {
+  }
+  // Вычисление процента "любви"
+  else {
     var lovdata = Math.random() * 100;
     lovdata = Math.floor(lovdata);
     document.getElementById("lovevalue").value = lovdata + "%";
-  }
-  if (lovdata > 70) {
-    alert(`Той качан? сиздин шайкештигиңиз ${lovdata}% барабар♥`);
-  } else if (lovdata > 50 && lovdata < 70) {
-    alert(`Жакшы жанылык! Cиздин шайкештигиңиз ${lovdata}% барабар♥`);
-  } else {
-    alert(`Cиздин шайкештигиңиз ${lovdata}% барабар♥`);
+
+    // Вывод сообщения в зависимости от уровня "любви"
+    if (lovdata > 70) {
+      alert(`Той качан? сиздин шайкештигиңиз ${lovdata}% барабар♥`);
+    } else if (lovdata > 50 && lovdata < 70) {
+      alert(`Жакшы жанылык! Cиздин шайкештигиңиз ${lovdata}% барабар♥`);
+    } else {
+      alert(`Cиздин шайкештигиңиз ${lovdata}% барабар♥`);
+    }
   }
 }
